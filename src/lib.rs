@@ -77,6 +77,8 @@ fn process_block(block: &mut Block) {
         }
         // do nothing otherwise
         Block::RawBlock(..) | Block::CodeBlock(..) | Block::HorizontalRule | Block::Null => {}
+        // fix compilation
+        &mut Block::Figure(_, _, _) => todo!()
     }
 }
 
